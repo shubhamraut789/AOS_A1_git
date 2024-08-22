@@ -1,0 +1,36 @@
+Overview
+This assignment includes two questions:
+
+File Reversal Program: Reverses a file's contents and stores the result in a new file under the "Assignment1" directory.
+
+Permissions Check Program: Verifies the permissions and content reversal between two files and the directory.
+
+Question 1: File Reversal Program
+Instructions
+Program Name: 2024201019_A1_Q1.cpp
+Compilation: g++ 2024201019_A1_Q1.cpp
+Execution:
+To reverse the entire file(for flag 0): ./a.out <input_file_name> 0 -> It will create Assignment1 directory and 0_<input_file_name> in it which contains reversed text file of input text file.
+
+To reverse file in two parts(for flag 1):./a.out <input_file_name> 1 <start_index> <end_index>  -> This will create another file 1_<input_file_name> in Assignment1 directory which contains 0 to start_index reversed ,end_index to end of the file reversed and between text keep as it is.  
+
+Edge Cases Handled:
+Invalid flag values other than 0 and 1.
+Incorrect number of command-line arguments.
+Non-existent input file or inaccessible file paths.
+Handling very large files efficiently by processing in chunks.
+
+
+Question 2: Permissions Check Program
+Instructions
+Program Name: 2024201019_A1_Q2.cpp
+Compilation:
+bash
+Copy code
+g++ 2024201019_A1_Q2.cpp
+Execution: ./a.out <newfile_path> <oldfile_path> <directory_path>
+Example : ./a.out Assignment1/0_A.txt A.txt Assignment1
+
+Edge Cases Handled
+File not found: The program will handle cases where the input file or directory does not exist.
+Permissions issues: If the program does not have the necessary permissions, it will output the appropriate error messages.
